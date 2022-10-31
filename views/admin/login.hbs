@@ -1,0 +1,19 @@
+
+
+<form action ='/admin/login' method="post">
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Usuario</label>
+    <input type="text" class="form-control" placeholder="Usuario" id="inputUser" name="usuario">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Contraseña</label>
+    <input type="password" class="form-control" id="inputPassword4" name="password" placeholder="Password">
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+  </div>
+</form>
+
+{{#if error}}
+<p>El usuario o contraseña incorrecto</p>
+{{/if}}

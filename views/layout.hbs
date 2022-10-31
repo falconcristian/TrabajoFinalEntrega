@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>:::Realidad Virtual:::</title>
+<link href="/stylesheets/estilo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+
+<div id="contenedor">
+<div id="encabezado">
+
+<div id="nav-sociales">
+    <ul> 
+       <li><a href="http://www.facebook.com"><img src="images/facebook.png" width="35" height="35" alt="Face"></a></li>
+      
+       <li><a href="http://www.youtube.com"><img src="images/youtube.png" width="35" height="35" alt="Youtube"></a></li>
+       
+       <li><a href="http://www.twitter.com"><img src="images/twitter.png" width="35" height="35" alt="Twitter"></a></li>
+       
+       <li><a href="//http://www.instagram.com"><img src="images/instagram.png" width="35" height="35" alt="Insta"></a></li>
+                 
+    </ul>
+</div><!--cierra nav-sociales-->
+
+</div><!--Cierra encabezado-->
+<div id="botonera">
+
+<ul>
+<li><a class="{{#if isInicio}}activo{{/if}}" href="/">Inicio</a></li>
+<li><a class="{{#if isLentesvr}}activo{{/if}}" href="/lentesvr">Lentes VR</a> </li>
+<li><a class="{{#if isHistoria}}activo{{/if}}" href="/historia">Historia</a> </li>
+<li><a class="{{#if isGaleria}}activo{{/if}}" href="/galeria">Galeria</a></li>
+<li><a class="{{#if isnoticias}}activo{{/if}}" href="/noticias">Noticias</a></li>
+<li><a class="{{#if isContacto}}activo{{/if}}" href="/contacto">Contacto</a></li>
+</ul>
+
+</div> <!--Cierra botonera-->
+
+<main class="holder">
+  {{{body}}}
+</main>
+
+<footer>
+
+Cristian Falcón
+
+</footer>
+
+  
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<div class="container" style="margin:50px auto">
+<div class="row">
+
+    <p class="text-end">Hola {{usuarios}} !<a class="btn btn-danger" href="/admin/login/logout"> Cerrar sesion<i class="fas fa-sign-out-alt"> </i></a> </p>
+    </div>
+
+    <div class="row">
+        <div class="col-7" style="margin-top:-9px ;">
+            <h2>Listado de novedades</h2>
+
+        </div>
+<div class="col-5 text-end"> 
+     <a href="/admin/novedades/agregar" class="btn btn-success"><i class="fas fa-plus"></i> Nuevo </a> 
+        
+</div>
+<div class="col-3">
+    <form class="form-inline my-2 my-lg-0" action="/admin/novedades" method="get">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q" {{#if q}} value="{{q}}" {{/if}}>
+    <button class="btn btn-secondary my-2 my-sm-0" type="submit" style="margin-left: 110px;"> <i class="fa fa-search"></i>
+    </button>
+    </form>
+</div> 
+    </div>
+
+{{#if is_search}}   
+{{#unless novedades.length}}
+No se encontraron resultados para "<strong>{{q}}</strong>"
+{{/unless}}
+{{/if}}
+
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col" style="color:aliceblue ;" >#</th>
+                        <th scope="col" style="color:aliceblue ;" >Titulo</th>
+                        <th scope="col" style="color:aliceblue ;"class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                      {{#each novedades}}
+                    <tr>
+                        <th scope="row" style="color:aliceblue ;">{{id}}</th>
+                        <td style="color:aliceblue ;">{{titulo}}</td>
+                        <td class="text-center">
+                            <a href="/admin/novedades/modificar/{{id}}" class="btn btn-sm btn-secondary"><i class="fa fa-pencil"></i></a>
+                            <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-sm btn-secondary"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                      {{/each}}
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+
+    <section class="holder">
+        <h2 style="color: red ; font-size: 30px ;">Últimas noticias agregadas</h2>
+        {{#each novedades}}
+         <div id="centronoticias">
+        <div class="novedades">
+            <h1 style="font-size: 30px ;">{{titulo}}</h1>
+            <h3 style="color:yellow ; font-size: 20px;">{{subtitulo}}</h3>
+            <p>{{cuerpo}}</p>
+            <hr>
+            </div>
+</div>
+{{/each}}
+</section>
+</div>

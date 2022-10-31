@@ -1,0 +1,33 @@
+<div id="centro">
+
+ <div id="caja-form">
+  <form action="/contacto" method="post" class="formulario">
+  <label for="nombre">Nombre:</label>
+  <input name="nombre" type="text">
+  <br>
+  <label for="apellido">Apellido:</label>
+  <input name="apellido" type="text">
+  <br>
+  <label for="email">E-mail:</label>
+  <input name="email" type="email">
+  <br>
+  <label for="mensaje">Mensaje:</label>
+  <input name="mensaje" type="text">
+  <br>
+  <br>
+  <input type="submit" value="Enviar" id="enviar">
+  <input name="reset" type="reset" value="reset" id="reset">
+  </form>
+  <p> {{message}} </p>
+  </div><!--cierra caja-form-->
+  
+ <div id="caja-video"> <!--Abre video-->
+  <h3>Gracias por visitarnos</h3>
+  <video controls width="380" height="260" poster="/images/fondo-video.jpg" id="video">
+      <source src="/images/realidad virtual.mp4" type="video/mp4"/>
+
+  </video>
+  
+  </div><!--cierra-video-->  
+
+</div><!--Cierra centro-->

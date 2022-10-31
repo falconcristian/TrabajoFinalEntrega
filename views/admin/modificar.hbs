@@ -1,0 +1,26 @@
+<div class="contanier" style="margin:50px auto">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h1>Agregar una nueva noticia</h1>
+            <form method="post" action="/admin/novedades/modificar">
+            <input type="hidden" value="{{novedad.id}}" name="id">
+            <div class="form-group">
+                  <label>Titulo:</label>
+                <input type="text" placeholder="Titulo" class="form-control" value="{{novedad.titulo}}" name="titulo">
+            </div>
+            <div class="form-group">
+                  <label>Subtitulo:</label>
+                <textarea placeholder="Subtitulo" class="form-control" name="subtitulo">{{novedad.subtitulo}} </textarea>
+            </div>
+            <div class="form-group">
+                  <label>Cuerpo:</label>
+                <textarea placeholder="Cuerpo" class="form-control" name="cuerpo">{{novedad.cuerpo}} </textarea>
+            </div>
+            <button type="submit" class"btn btn-primary" id="enviar">Modificar</button>
+            </form>
+        </div>
+    </div>
+
+    {{#if error}}
+    <h5>{{message}}</h5>
+    {{/if}}
