@@ -1,5 +1,5 @@
 
-@echo off
+@echo off 
 heroku config | findstr CLEARDB > config.txt
 set /p url=<config.txt
 
